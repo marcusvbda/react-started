@@ -1,0 +1,35 @@
+.social-btn {
+    opacity: .9;
+    display :flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    border: unset;
+    .buttonIcon {
+        display :flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width : 40px;
+        height: 40px;
+        border-radius: 5px;
+        img {
+            height: 30px;
+        }
+    }
+    &.facebook {
+        background-color:#3b5998;
+        color : white;
+    }
+    &.google {
+        background-color:#4285f4;
+        color : white;
+    }
+    &:hover {
+        transition: opacity .7s;
+        opacity: 1;
+    }
+}
