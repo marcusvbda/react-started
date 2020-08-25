@@ -7,6 +7,7 @@ import SocialBtn from '@components/form/social-btn'
 import FloatingLabelInput from '@components/form/floating-label-input'
 
 export default function Login() {
+    const { REACT_APP_FACEBOOK_APP_KEY, REACT_APP_GOOGLE_APP_KEY } = process.env
     const [form, setForm] = useState({ email: "", password: "", remember: true })
     const [error, setError] = useState({ email: null, password: null })
     const [loading, setLoading] = useState(false)
@@ -107,8 +108,8 @@ export default function Login() {
                                 </Form>
                             </Col>
                             <Col sm={12} lg={6} className="px-5 d-flex flex-column justify-content-center align-content-center py-5">
-                                <SocialBtn variant="facebook" />
-                                <SocialBtn variant="google" className="mt-3" />
+                                {REACT_APP_FACEBOOK_APP_KEY && <SocialBtn facebookKey={REACT_APP_FACEBOOK_APP_KEY} variant="facebook" onClick={console.log} />}
+                                {REACT_APP_GOOGLE_APP_KEY && <SocialBtn googleKey={REACT_APP_GOOGLE_APP_KEY} variant="google" className="mt-2" onClick={console.log} />}
                             </Col>
                         </Row>
                     </Col>
