@@ -126,16 +126,7 @@ export default function Signin() {
                             </Form.Row>
                             <Row>
                                 <Col sm={12} lg={6}>
-                                    <Button disabled={!isValid} type="submit" variant="outline-primary" block className="rounded-pill">
-                                        {
-                                            !loading.form ? 'Login' : (
-                                                <>
-                                                    <span className="spinner-grow spinner-grow-sm mr-2" />
-                                                    <span>Entrando...</span>
-                                                </>
-                                            )
-                                        }
-                                    </Button>
+                                    <Button disabled={!isValid} type="submit" variant="outline-primary" block className="rounded-pill">Entrando</Button>
                                 </Col>
                             </Row>
                         </Form>
